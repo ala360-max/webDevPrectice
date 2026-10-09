@@ -10,9 +10,130 @@
 
 <body>
 
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+    <div class="gridFullpage">
+
+
+
+
+        <!-- This is Header Section Start -->
+
+
+        <header>
+            <nav>
+                <li class="btnHome">Home</li>
+                <li>Example 01</li>
+                <li>Example 02</li>
+                <li>Example 03</li>
+                <li>Example 04</li>
+                <li>Example 05</li>
+            </nav>
+
+            <dialog>
+                <div class="diconta">
+                    <h1>Example 01</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+            </dialog>
+
+
+            <dialog class="dialog">
+                <div class="diconta">
+                    <h1>Example 02</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+                <div class="diconta">
+                    <h1>Example 01</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+                <div class="diconta">
+                    <h1>Example 01</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+            </dialog>
+
+
+
+            <dialog>
+                <div class="diconta">
+                    <h1>Example 03</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+            </dialog>
+
+            <dialog>
+                <div class="diconta">
+                    <h1>Example 04</h1>
+                    <p>Example 01 Example 01 Example 01 Example 01 Example 01 Example 01 Example 01Example 01 Example 01
+                        Example 01 Example 01 Example 01</p>
+                </div>
+            </dialog>
+
+
+        </header>
+        <br>
+
+        <!-- This is Header Section End -->
+
+
+
+        <!-- This is main Section Start -->
+
+        <main>
+
+        </main>
+
+        <!-- This is main Section End -->
+
+
+
+
+        <!-- This is article section Start -->
+
+        <article>
+
+        </article>
+
+        <!-- This is article section End -->
+
+
+
+
+        <!-- This is footer Section Start -->
+
+        <footer>
+
+        </footer>
+
+        <!-- This is footer Section End -->
+
+    </div>
+
+
+
+
+    <script>
+        let btnDisplay = document.querySelector(".btnHome");
+        btnDisplay.addEventListener('click', function () {
+            let displabtn = document.querySelector(".dialog");
+            if (displabtn.style.display === "none") {
+                displabtn.style.display = "flex";
+                displabtn.style.maxHeight = displabtn.scrollHeight + "px";
+            } else {
+                displabtn.style.maxHeight = 0 + "px";
+                displabtn.style.display = "none";
+
+            }
+
+
+        });
+
+    </script>
 
 </body>
 

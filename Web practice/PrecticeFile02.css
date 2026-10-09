@@ -1,14 +1,127 @@
 body {
-    background-image: url(Alamin\ GitHub\ Portrait\ Banner.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-family: "Georgia", serif;
+    height: 100vh;
+
+}
+
+body::before {
+    content: "";
+    background-image: url(AlaminBanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    filter: blur(4px);
+    inset: 0;
+    z-index: -1;
+}
+
+
+.gridFullpage {
+    display: grid;
+    grid-template-areas:
+        "headr headr"
+        "main airtcl"
+        "footer footer";
+    gap: 10px;
 }
 
 header {
+    grid-area: headr;
+}
+
+main {
+    grid-area: main;
+}
+
+article {
+    grid-area: airtcl;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
+
+header {
+    margin: 3px;
     width: 100%;
     background-color: transparent;
-    box-shadow: inset 0px 0px 5px black;
+    height: auto;
+    /* box-shadow: inset 0px 0px 5px rgb(24, 23, 23), 0px 0px 5px rgb(255, 255, 255); */
+}
+
+header>nav {
+    height: auto;
+    width: 100%;
+    margin: 10px;
+    box-shadow: inset 0px 0px 5px white;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li {
+    /* position: absolute; */
+    list-style-type: none;
+    color: white;
+    float: left;
+    margin: 0px 10px;
+    padding: 15px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    transition: 0.5s;
+
+}
+
+li:hover {
+    margin: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px white;
+}
+
+.sectinon {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    background-color: #0F1422;
+}
+
+.dialog {
+    display: none;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: inset 0px 0px 3px white;
+    color: aliceblue;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.8s cubic-bezier(0.27, 2.53, 0.69, -1.02) 0.2s;
+}
+
+.btnHome {
+    cursor: pointer;
+}
+
+
+main {
+    width: 100%;
+    height: 600px;
+
+    border: 1px solid red;
+}
+
+article {
+    border: 1px solid white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    border: 1px solid rebeccapurple;
 }
